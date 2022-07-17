@@ -74,11 +74,13 @@ class TestCaser {
         console.assert(Snake.toCamel(actual)===expected)
         console.assert(Snake.toCamel('___to_html')===expected)
         console.assert(Snake.toCamel('___to___html')===expected)
+        console.assert(Snake.toCamel('___to___html___')===expected)
         actual = '-to-html'
         expected = 'ToHtml'
         console.assert(Chain.toCamel(actual)===expected)
         console.assert(Chain.toCamel('---to-html')===expected)
         console.assert(Chain.toCamel('---to---html')===expected)
+        console.assert(Chain.toCamel('---to---html---')===expected)
     }
     // そもそも単語の区切りが曖昧。
     // username, user-name
